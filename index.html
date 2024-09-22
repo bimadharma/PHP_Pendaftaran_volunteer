@@ -67,10 +67,8 @@
     }
 
     .text-shadow {
-    text-shadow: 1px 1px 8px rgb(255, 187, 29); 
-}
-
-
+      text-shadow: 1px 1px 8px rgb(255, 187, 29);
+    }
   </style>
 
 
@@ -80,22 +78,25 @@
 
   <nav class="navbar navbar-expand-lg bg-black sticky-top">
     <div class="container-fluid">
-      <a href="index.html"><img src="assets/Volunteer.png" alt="logo-volunteer" style="width: 150px;"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link active text-white" aria-current="page" href="#home">Beranda</a>
-          <a class="nav-link text-white" href="#tentang">Tentang</a>
-          <a class="nav-link text-white" href="#bidang">Bidang Dibutuhkan</a>
-          <a class="nav-link text-white" href="#">Benefit</a>
-          <a class="nav-link text-white" href="#">Kontak</a>
+        <a href="index.html"><img src="assets/Volunteer.png" alt="logo-volunteer" style="width: 150px;"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav me-auto">
+                <a class="nav-link active text-white" aria-current="page" href="#home">Beranda</a>
+                <a class="nav-link text-white" href="#tentang">Tentang</a>
+                <a class="nav-link text-white" href="#bidang">Bidang Dibutuhkan</a>
+                <a class="nav-link text-white" href="#kontak">Kontak</a>
+            </div>
+            <a href="login.html" class="btn btn-warning me-2">Login</a>
+            <a href="daftar.html" class="btn btn-outline-warning">Daftar</a>
         </div>
-      </div>
     </div>
-  </nav>
+</nav>
+
+
 
   <main>
     <div class="hero" id="home">
@@ -110,7 +111,8 @@
     </div>
 
     <div class="container full-body-container d-flex justify-content-center align-items-center" id="tentang">
-      <div class="card shadow-lg p-4" style="max-width: 1200px; width: 100%; background-color: transparent; border: 2px solid rgba(255, 255, 255, 0.7);">
+      <div class="card shadow-lg p-4"
+        style="max-width: 1200px; width: 100%; background-color: transparent; border: 2px solid rgba(255, 255, 255, 0.7);">
         <h2 class="card-title text-warning text-center text-shadow">VOLUNTEER</h2>
         <div class="card-body">
           <p class="card-text text-center" style="color: white;">
@@ -127,76 +129,121 @@
 
     <article>
       <h2 class="text-warning text-center text-shadow mb-4" id="bidang">POSISI YANG DIBUTUHKAN</h2>
-    <div class="card-group container">
-      
-      <div class="row g-3">
-        <div class="col-md-4">
-          <div class="card">
-            <img src="assets/Social-Media-Specialist.jpg" class="card-img-top custom-img" alt="SOCIAL MEDIA SPECIALIST">
-            <div class="card-body">
-              <h5 class="card-title">SOCIAL MEDIA SPECIALIST</h5>
-              <p class="card-text">Bertanggung jawab memimpin divisi Social Media Specialist dan
-                memantau kinerja staf dalam mengelola content plan di semua platform
-                sosial media. Berkoordinasi dan bekerjasama dengan divisi lain terkait rencana
-                pembuatan dan publikasi konten digital yang menarik dan kreatif. Melakukan analisa dan evaluasi terhadap laporan kerja seluruh staf pada
-                Meeting Staf Rutin dan Rapat Besar.
-                </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="assets/BUSINESS-DEVELOPMENT.jpg" class="card-img-top custom-img" alt="BUSINESS DEVELOPMENT">
-            <div class="card-body">
-              <h5 class="card-title">BUSINESS DEVELOPMENT</h5>
-              <p class="card-text">Menjadi PIC atau LO pada setiap kegiatan bisnis yang dibuat berdasarkan kesepakatan. Turut serta dalam melakukan riset perkembangan bisnis organisasi secara berkala untuk mendapatkan peluang profit bagi organisasi. Turut serta dalam melakukan inovasi untuk menciptakan dan menjalankan kegiatan yang dapat menjadi sumber dana bagi seluruh aktivitas.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="assets/Front_End_Developer.jpg" class="card-img-top custom-img" alt="FRONTEND DEVELOPER">
-            <div class="card-body">
-              <h5 class="card-title">FRONTEND DEVELOPER</h5>
-              <p class="card-text">Memimpin dan mengelola tim web development dalam merencanakan, merancang, dan mengimplementasikan proyek-proyek web menggunakan Next.js, Laravel, MySQL, dan teknologi terkait lainnya.Bertanggung jawab atas seluruh development cycle pengembangan web, mulai dari konseptualisasi, pengembangan, pengujian, hingga deployment.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="assets/back-end.jpg" class="card-img-top custom-img" alt="BACKEND DEVELOPER">
-            <div class="card-body">
-              <h5 class="card-title">BACKEND DEVELOPER</h5>
-              <p class="card-text">Bertanggung jawab atas seluruh development cycle pengembangan web, mulai dari konseptualisasi, pengembangan, pengujian, hingga deployment.
-                Bekerja sama dengan stakeholder internal dan eksternal untuk menentukan kebutuhan proyek, menetapkan timeline, dan memastikan release sesuai dengan standar kualitas.
-                </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="assets/QA.jpg" class="card-img-top custom-img" alt="QUALITY ASSURANCE">
-            <div class="card-body">
-              <h5 class="card-title">QUALITY ASSURANCE</h5>
-              <p class="card-text">menentukan kebutuhan proyek, menetapkan timeline, dan memastikan release sesuai dengan standar kualitas.
-                Mengawasi integrasi sistem dan infrastruktur untuk memastikan kinerja dan keamanan web. Melakukan code review, mengelola repository GitHub, dan memastikan best practice diterapkan dalam tim.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="assets/web-design-header.jpg" class="card-img-top custom-img" alt="WEB DESIGN">
-            <div class="card-body">
-              <h5 class="card-title">WEB DESIGN</h5>
-              <p class="card-text">Membuat wireframe, prototype, dan desain high-fidelity menggunakan Figma. Melakukan sesi usability testing, menganalisis hasil, dan mengiterasi desain berdasarkan umpan balik dan wawasan sesuai metrics penilaian untuk mengukur keberhasilan desain.</p>
-            </div>
-          </div>
-        </div>
-      </article>
+      <div class="card-group container">
 
-
+        <div class="row g-3">
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/Social-Media-Specialist.jpg" class="card-img-top custom-img"
+                alt="SOCIAL MEDIA SPECIALIST">
+              <div class="card-body">
+                <h5 class="card-title">SOCIAL MEDIA SPECIALIST</h5>
+                <p class="card-text">Bertanggung jawab memimpin divisi Social Media Specialist dan
+                  memantau kinerja staf dalam mengelola content plan di semua platform
+                  sosial media. Berkoordinasi dan bekerjasama dengan divisi lain terkait rencana
+                  pembuatan dan publikasi konten digital yang menarik dan kreatif. Melakukan analisa dan evaluasi
+                  terhadap laporan kerja seluruh staf pada
+                  Meeting Staf Rutin dan Rapat Besar.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/BUSINESS-DEVELOPMENT.jpg" class="card-img-top custom-img" alt="BUSINESS DEVELOPMENT">
+              <div class="card-body">
+                <h5 class="card-title">BUSINESS DEVELOPMENT</h5>
+                <p class="card-text">Menjadi PIC atau LO pada setiap kegiatan bisnis yang dibuat berdasarkan
+                  kesepakatan. Turut serta dalam melakukan riset perkembangan bisnis organisasi secara berkala untuk
+                  mendapatkan peluang profit bagi organisasi. Turut serta dalam melakukan inovasi untuk menciptakan dan
+                  menjalankan kegiatan yang dapat menjadi sumber dana bagi seluruh aktivitas.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/Front_End_Developer.jpg" class="card-img-top custom-img" alt="FRONTEND DEVELOPER">
+              <div class="card-body">
+                <h5 class="card-title">FRONTEND DEVELOPER</h5>
+                <p class="card-text">Memimpin dan mengelola tim web development dalam merencanakan, merancang, dan
+                  mengimplementasikan proyek-proyek web menggunakan Next.js, Laravel, MySQL, dan teknologi terkait
+                  lainnya.Bertanggung jawab atas seluruh development cycle pengembangan web, mulai dari konseptualisasi,
+                  pengembangan, pengujian, hingga deployment.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/back-end.jpg" class="card-img-top custom-img" alt="BACKEND DEVELOPER">
+              <div class="card-body">
+                <h5 class="card-title">BACKEND DEVELOPER</h5>
+                <p class="card-text">Bertanggung jawab atas seluruh development cycle pengembangan web, mulai dari
+                  konseptualisasi, pengembangan, pengujian, hingga deployment.
+                  Bekerja sama dengan stakeholder internal dan eksternal untuk menentukan kebutuhan proyek, menetapkan
+                  timeline, dan memastikan release sesuai dengan standar kualitas.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/QA.jpg" class="card-img-top custom-img" alt="QUALITY ASSURANCE">
+              <div class="card-body">
+                <h5 class="card-title">QUALITY ASSURANCE</h5>
+                <p class="card-text">menentukan kebutuhan proyek, menetapkan timeline, dan memastikan release sesuai
+                  dengan standar kualitas.
+                  Mengawasi integrasi sistem dan infrastruktur untuk memastikan kinerja dan keamanan web. Melakukan code
+                  review, mengelola repository GitHub, dan memastikan best practice diterapkan dalam tim.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/web-design-header.jpg" class="card-img-top custom-img" alt="WEB DESIGN">
+              <div class="card-body">
+                <h5 class="card-title">WEB DESIGN</h5>
+                <p class="card-text">Membuat wireframe, prototype, dan desain high-fidelity menggunakan Figma. Melakukan
+                  sesi usability testing, menganalisis hasil, dan mengiterasi desain berdasarkan umpan balik dan wawasan
+                  sesuai metrics penilaian untuk mengukur keberhasilan desain.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </article>
+
+
+    
+
+    <div class="container my-5" style="color: white;" id="kontak">
+      <h2 class="text-warning text-center mb-4 text-shadow">Kontak</h2>
+      <div class="row">
+          <div class="col-md-6">
+              <h5>Contact Information</h5>
+              <p><strong>Phone:</strong> +62 123 456 789</p>
+              <p><strong>Email:</strong> bimdarma@gmail.com</p>
+          </div>
+          <div class="col-md-6">
+              <h5>Saran untuk kami</h5>
+              <form method="POST" action="proses_saran.php">
+                  <div class="mb-3">
+                      <label for="nama" class="form-label">Nama</label>
+                      <input type="text" class="form-control" id="nama" name="nama" placeholder="nama kamu?" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Email kamu?" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="saran" class="form-label">Saran</label>
+                      <textarea class="form-control" id="saran" name="saran" rows="4" placeholder="Masukkan kesini yaa sarannya.." required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-warning">Submit</button>
+              </form>
+          </div>
+      </div>
+  </div>
+  
 
   </main>
 

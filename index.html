@@ -14,9 +14,9 @@
       font-family: "Josefin Sans", sans-serif;
       background-color: #361337;
       color: #adadad;
-      margin: 0; 
-      padding: 0; 
-      height: 100%; 
+      margin: 0;
+      padding: 0;
+      height: 100%;
     }
 
     .navbar-toggler {
@@ -28,84 +28,177 @@
     }
 
     .hero {
-      position: relative; 
+      position: relative;
     }
 
     .hero img {
-      width: 100%; 
-      height: auto; 
-      
+      width: 100%;
+      height: auto;
+
     }
 
     .overlay {
-      position: absolute; 
-      top: 0; 
-      left: 0; 
-      width: 100%; 
-      height: 100%; 
-      background-color: rgba(0, 0, 0, 0.5); 
-      display: flex; 
-      flex-direction: column; 
-      justify-content: center; 
-      align-items: center; 
-      color: white; 
-      text-align: center; 
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
     }
 
     .large-title {
-      font-size: 5rem; 
+      font-size: 5rem;
     }
+
     .full-body-container {
-            min-height: 100vh; 
-        }
+      min-height: 100vh;
+    }
+
+    .custom-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .text-shadow {
+    text-shadow: 1px 1px 8px rgb(255, 187, 29); 
+}
+
+
   </style>
 
 
 </head>
 
 <body>
-  
-    <nav class="navbar navbar-expand-lg bg-black sticky-top">
-      <div class="container-fluid">
-        <a href="index.html"><img src="assets/Volunteer.png" alt="logo-volunteer" style="width: 150px;"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active text-white" aria-current="page" href="#home">Beranda</a>
-            <a class="nav-link text-white" href="#tentang">Tentang</a>
-            <a class="nav-link text-white" href="#">Bidang Dibutuhkan</a>
-            <a class="nav-link text-white" href="#">Benefit</a>
-            <a class="nav-link text-white" href="#">Kontak</a>
-          </div>
+
+  <nav class="navbar navbar-expand-lg bg-black sticky-top">
+    <div class="container-fluid">
+      <a href="index.html"><img src="assets/Volunteer.png" alt="logo-volunteer" style="width: 150px;"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active text-white" aria-current="page" href="#home">Beranda</a>
+          <a class="nav-link text-white" href="#tentang">Tentang</a>
+          <a class="nav-link text-white" href="#bidang">Bidang Dibutuhkan</a>
+          <a class="nav-link text-white" href="#">Benefit</a>
+          <a class="nav-link text-white" href="#">Kontak</a>
         </div>
       </div>
-    </nav>
-
-<main>
-  <div class="hero" id="home">
-    <img src="assets/wallpaper.jpg" alt="Wallpaper" class="img-fluid">
-    <div class="overlay">
-      <h1 class="display-7 large-title">VOLUNTEER</h1> 
-      <p class="lead">Teamwork</p> 
-      <a href="crud.php" class="btn btn-primary btn-lg">Daftar Sekarang</a> 
     </div>
-  </div>
+  </nav>
+
+  <main>
+    <div class="hero" id="home">
+      <img src="assets/wallpaper.jpg" alt="Wallpaper" class="img-fluid">
+      <div class="overlay">
+        <h1 class="display-1 d-none d-md-block">VOLUNTEER</h1>
+        <h1 class="display-3 d-md-none">VOLUNTEER</h1>
+
+        <p class="lead">Teamwork</p>
+        <a href="crud.php" class="btn btn-primary btn-lg">Daftar Sekarang</a>
+      </div>
+    </div>
 
     <div class="container full-body-container d-flex justify-content-center align-items-center" id="tentang">
-        <div class="card shadow-lg p-4" style="max-width: 1200px; width: 100%;">
-            <h2 class="card-title text-primary text-center">Volunteer</h2>
+      <div class="card shadow-lg p-4" style="max-width: 1200px; width: 100%; background-color: transparent; border: 2px solid rgba(255, 255, 255, 0.7);">
+        <h2 class="card-title text-warning text-center text-shadow">VOLUNTEER</h2>
+        <div class="card-body">
+          <p class="card-text text-center" style="color: white;">
+            Bergabunglah dengan tim volunteer kami untuk membuat perubahan positif di komunitas! Kami percaya bahwa
+            setiap individu memiliki kekuatan untuk memberikan dampak besar, tidak peduli seberapa kecil kontribusi
+            tersebut. Sebagai seorang volunteer, Anda akan berkesempatan untuk berinteraksi dengan orang-orang dari
+            berbagai latar belakang, memperluas jaringan sosial, dan mengasah keterampilan yang dapat membantu Anda di
+            masa depan. Temukan kesempatan untuk belajar, tumbuh, dan berkontribusi.
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <article>
+      <h2 class="text-warning text-center text-shadow mb-4" id="bidang">POSISI YANG DIBUTUHKAN</h2>
+    <div class="card-group container">
+      
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="assets/Social-Media-Specialist.jpg" class="card-img-top custom-img" alt="SOCIAL MEDIA SPECIALIST">
             <div class="card-body">
-                <p class="card-text text-center">
-                    Bergabunglah dengan tim volunteer kami untuk membuat perubahan positif di komunitas! Kami percaya bahwa setiap individu memiliki kekuatan untuk memberikan dampak besar, tidak peduli seberapa kecil kontribusi tersebut. Sebagai seorang volunteer, Anda akan berkesempatan untuk berinteraksi dengan orang-orang dari berbagai latar belakang, memperluas jaringan sosial, dan mengasah keterampilan yang dapat membantu Anda di masa depan. Temukan kesempatan untuk belajar, tumbuh, dan berkontribusi.
+              <h5 class="card-title">SOCIAL MEDIA SPECIALIST</h5>
+              <p class="card-text">Bertanggung jawab memimpin divisi Social Media Specialist dan
+                memantau kinerja staf dalam mengelola content plan di semua platform
+                sosial media. Berkoordinasi dan bekerjasama dengan divisi lain terkait rencana
+                pembuatan dan publikasi konten digital yang menarik dan kreatif. Melakukan analisa dan evaluasi terhadap laporan kerja seluruh staf pada
+                Meeting Staf Rutin dan Rapat Besar.
                 </p>
             </div>
+          </div>
         </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="assets/BUSINESS-DEVELOPMENT.jpg" class="card-img-top custom-img" alt="BUSINESS DEVELOPMENT">
+            <div class="card-body">
+              <h5 class="card-title">BUSINESS DEVELOPMENT</h5>
+              <p class="card-text">Menjadi PIC atau LO pada setiap kegiatan bisnis yang dibuat berdasarkan kesepakatan. Turut serta dalam melakukan riset perkembangan bisnis organisasi secara berkala untuk mendapatkan peluang profit bagi organisasi. Turut serta dalam melakukan inovasi untuk menciptakan dan menjalankan kegiatan yang dapat menjadi sumber dana bagi seluruh aktivitas.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="assets/Front_End_Developer.jpg" class="card-img-top custom-img" alt="FRONTEND DEVELOPER">
+            <div class="card-body">
+              <h5 class="card-title">FRONTEND DEVELOPER</h5>
+              <p class="card-text">Memimpin dan mengelola tim web development dalam merencanakan, merancang, dan mengimplementasikan proyek-proyek web menggunakan Next.js, Laravel, MySQL, dan teknologi terkait lainnya.Bertanggung jawab atas seluruh development cycle pengembangan web, mulai dari konseptualisasi, pengembangan, pengujian, hingga deployment.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="assets/back-end.jpg" class="card-img-top custom-img" alt="BACKEND DEVELOPER">
+            <div class="card-body">
+              <h5 class="card-title">BACKEND DEVELOPER</h5>
+              <p class="card-text">Bertanggung jawab atas seluruh development cycle pengembangan web, mulai dari konseptualisasi, pengembangan, pengujian, hingga deployment.
+                Bekerja sama dengan stakeholder internal dan eksternal untuk menentukan kebutuhan proyek, menetapkan timeline, dan memastikan release sesuai dengan standar kualitas.
+                </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="assets/QA.jpg" class="card-img-top custom-img" alt="QUALITY ASSURANCE">
+            <div class="card-body">
+              <h5 class="card-title">QUALITY ASSURANCE</h5>
+              <p class="card-text">menentukan kebutuhan proyek, menetapkan timeline, dan memastikan release sesuai dengan standar kualitas.
+                Mengawasi integrasi sistem dan infrastruktur untuk memastikan kinerja dan keamanan web. Melakukan code review, mengelola repository GitHub, dan memastikan best practice diterapkan dalam tim.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="assets/web-design-header.jpg" class="card-img-top custom-img" alt="WEB DESIGN">
+            <div class="card-body">
+              <h5 class="card-title">WEB DESIGN</h5>
+              <p class="card-text">Membuat wireframe, prototype, dan desain high-fidelity menggunakan Figma. Melakukan sesi usability testing, menganalisis hasil, dan mengiterasi desain berdasarkan umpan balik dan wawasan sesuai metrics penilaian untuk mengukur keberhasilan desain.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+
+      </div>
     </div>
-    
-</main>
+
+  </main>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

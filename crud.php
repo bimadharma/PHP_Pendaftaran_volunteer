@@ -9,11 +9,25 @@
 </head>
 
 <body>
+<?php
+session_start(); // Memulai session
+
+// Memeriksa apakah pengguna sudah login dengan email
+if (!isset($_SESSION['email'])) {
+    // Jika tidak ada session email, arahkan ke halaman login
+    header("Location: login.php");
+    exit();
+}
+
+?>
 
   <div class="container">
     <br>
     <h2>
-      <center>Peserta Volunteer</center>
+      <center>Selamat datang di halaman, <?php echo $_SESSION['nama']; ?></center>
+    </h2>
+    <h2>
+      <center>Peserta Volunteer </center>
     </h2>
     <?php
     include "koneksi.php";
@@ -82,8 +96,11 @@
       ?>
     </table>
     <a href="tambah.php" class="btn btn-primary" role="button">Tambah Data</a>
-
+    <form action="logout.php" method="post">
+    <button type="submit" class="btn btn-danger">Logout</button>
+</form>
   </div>
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

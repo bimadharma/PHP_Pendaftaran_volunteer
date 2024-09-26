@@ -15,13 +15,13 @@
 <body style="background-color: #361337;">
 
 <?php
-// Memasukkan file koneksi
+
 include 'koneksi.php';
 session_start();
 
-// Cek apakah form di-submit
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Memeriksa apakah 'email' dan 'password' ada dalam POST
+  
     if (isset($_POST['email']) && isset($_POST['password'])) {
         // Mendapatkan data dari form login
         $email = $_POST['email'];
@@ -34,18 +34,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Memeriksa apakah email ada di database
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc(); // Ambil data pengguna
-            
+
             $_SESSION['nama'] = $row['nama']; // Menyimpan email pengguna dalam session
             $_SESSION['email'] = $email; // Menyimpan email pengguna dalam session
-            // Jika login berhasil, arahkan pengguna ke crud.php
-            header("Location: crud.php");
-            exit(); // Pastikan untuk keluar setelah redirect
+           
+            header("Location: dashboard.php");
+            exit(); 
         } else {
-            // Jika email atau password salah, gunakan alert
+        
             echo "<script>alert('Email atau Password salah!');</script>";
         }
     } else {
-        // Jika email atau password tidak diisi
+        
         echo "<script>alert('Silakan masukkan email dan password!');</script>";
     }
 

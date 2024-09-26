@@ -7,6 +7,21 @@
 </head>
 
 <body>
+    
+<?php
+  session_start(); // Memulai session
+
+  // Memeriksa apakah pengguna sudah login dengan email
+  if (!isset($_SESSION['email'])) {
+    // Jika tidak ada session email, arahkan ke halaman login
+    header("Location: login.php");
+    exit();
+  }
+
+  ?>
+
+
+
     <div class="container">
         <?php
         //Include file koneksi, untuk koneksikan ke database
@@ -37,7 +52,7 @@
 
             //Kondisi apakah berhasil atau tidak dalam mengeksekusi query diatas
             if ($hasil) {
-                header("Location:crud.php");
+                header("Location:dashboard.php");
             } else {
                 echo "<div class='alert alert-danger'> Data Gagal disimpan.</div>";
             }
@@ -72,7 +87,7 @@
                 <label>Minat keterampilan:</label>
                 <input type="text" name="minat_keterampilan" class="form-control" placeholder="Masukan minat keterampilan anda" required />
             </div>
-            <a href="crud.php" class="btn btn-secondary" role="button">Cancel</a>
+            <a href="dashboard.php" class="btn btn-secondary" role="button">Cancel</a>
             <button type="submit" name="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>

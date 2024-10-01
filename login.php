@@ -14,46 +14,6 @@
 
 <body style="background-color: #361337;">
 
-<?php
-
-include 'koneksi.php';
-session_start();
-
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  
-    if (isset($_POST['email']) && isset($_POST['password'])) {
-        // Mendapatkan data dari form login
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-
-        // SQL untuk mengambil data user berdasarkan email
-        $sql = "SELECT * FROM user WHERE email = '$email' AND password = '$password'";
-        $result = $link->query($sql);
-
-        // Memeriksa apakah email ada di database
-        if ($result->num_rows > 0) {
-            $row = $result->fetch_assoc(); // Ambil data pengguna
-
-            $_SESSION['nama'] = $row['nama']; // Menyimpan email pengguna dalam session
-            $_SESSION['email'] = $email; // Menyimpan email pengguna dalam session
-           
-            header("Location: dashboard.php");
-            exit(); 
-        } else {
-        
-            echo "<script>alert('Email atau Password salah!');</script>";
-        }
-    } else {
-        
-        echo "<script>alert('Silakan masukkan email dan password!');</script>";
-    }
-
-    // Menutup koneksi
-    $link->close();
-}
-?>
-
 
     <section class="vh-100">
         <div class="container py-5 h-100">
@@ -68,30 +28,43 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <div class="col-md-6 col-lg-7 d-flex align-items-center">
                                 <div class="card-body p-4 p-lg-3 text-black">
 
-                                    <form method="POST" action="">
+                                    <form method="POST" action="cek_login.php">
 
                                         <div class="d-flex align-items-center mb-3 pb-1">
                                             <span class="h1 fw-bold mb-0">Volunteer Admin</span>
                                         </div>
 
-                                        <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
+                                        <h5 class="fw-normal mb-3" style="letter-spacing: 1px;">Sign into your account</h5>
+                                        <p>
+                                            <?php
+                                            if (isset($_GET['pesan'])) {
+                                                if ($_GET['pesan'] == 'gagal') {
+                                                    echo '<i class="text-danger">Login Gagal! Username atau Password tidak sesuai!</i>';
+                                                } else if ($_GET['pesan'] == 'empty') {
+                                                    echo '<i class="text-danger">Username dan Password tidak boleh kosong!</i>';
+                                                } else if($_GET['pesan'] == 'notlogin') {
+                                                    echo '<i class="text-danger">Anda harus login untuk mengakses halaman admin!</i>';
+                                                }
+                                            }
+                                            ?>
+                                        </p>
 
                                         <div data-mdb-input-init class="form-outline mb-4">
                                             <label class="form-label" for="email">Email address</label>
-                                            <input type="email" name="email" id="email" class="form-control form-control-lg" placeholder="Masukkan email di sini yaa.." required />
+                                            <input type="text" name="email" id="email" class="form-control form-control-lg" placeholder="Masukkan email di sini yaa.." required />
                                         </div>
 
                                         <div data-mdb-input-init class="form-outline mb-4">
                                             <label class="form-label" for="password">Password</label>
-                                            <input type="password" name="password" id="password" class="form-control form-control-lg"placeholder="Kalau password di sini yaa.."required />
+                                            <input type="password" name="password" id="password" class="form-control form-control-lg" placeholder="Kalau password di sini yaa.." required />
                                         </div>
 
                                         <div class="pt-1 mb-4">
-                                            <button data-mdb-button-init data-mdb-ripple-init class="btn btn-dark btn-lg btn-block" name = "submit" type="submit">Login</button>
+                                            <button data-mdb-button-init data-mdb-ripple-init class="btn btn-dark btn-lg btn-block" name="submit" type="submit">Login</button>
                                             <button data-mdb-button-init data-mdb-ripple-init class="btn btn-lg btn-outline-secondary" type="button" onclick="window.location.href='index.html';">Cencel</button>
                                         </div>
-                                        <!-- <p class="mb-1 pb-lg-2" style="color: #393f81;">Don't have an account? <a href="#!"
-                                                style="color: #393f81;">Register here</a></p> -->
+                                        <p class="mb-1 pb-lg-2" style="color: #393f81;">Don't have an account? <a href="registrasi.php"
+                                                style="color: #393f81;">Register here</a></p>
                                     </form>
 
                                 </div>
@@ -103,4 +76,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </section>
 </body>
+
 </html>

@@ -21,7 +21,7 @@
   // Memeriksa apakah pengguna sudah login dengan email
   if (!isset($_SESSION['email'])) {
     // Jika tidak ada session email, arahkan ke halaman login
-    header("Location: login.php");
+    header("Location: login.php?pesan=notlogin");
     exit();
   }
 

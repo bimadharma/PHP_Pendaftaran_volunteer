@@ -13,7 +13,7 @@
 
 <?php
 // Include file koneksi untuk menghubungkan ke database
-include "koneksi.php";
+include "../koneksi.php";
 
 // Fungsi untuk mengamankan input pengguna
 function input($data) {

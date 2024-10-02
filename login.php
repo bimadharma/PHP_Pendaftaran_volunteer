@@ -31,7 +31,7 @@
                                     <form method="POST" action="cek_login.php">
 
                                         <div class="d-flex align-items-center mb-3 pb-1">
-                                            <span class="h1 fw-bold mb-0">Volunteer Admin</span>
+                                            <span class="h1 fw-bold mb-0">Volunteer</span>
                                         </div>
 
                                         <h5 class="fw-normal mb-3" style="letter-spacing: 1px;">Sign into your account</h5>

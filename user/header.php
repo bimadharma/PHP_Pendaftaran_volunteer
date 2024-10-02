@@ -1,11 +1,12 @@
 <?php
-session_start();
+  session_start(); // Memulai session
 
-// Periksa apakah pengguna adalah admin
-if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
-    header("Location: login.php");
+  // Memeriksa apakah pengguna sudah login dengan email
+  if (!isset($_SESSION['email'])) {
+    // Jika tidak ada session email, arahkan ke halaman login
+    header("Location: ../login.php?pesan=notlogin");
     exit();
-}
+  }
 
   ?>
 
@@ -30,15 +31,10 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
             <a class="nav-link text-white active" aria-current="page" href="dashboard.php">Dashboard</a>
           </li>
 
-           <!-- Menu Akun -->
-           <li class="nav-item">
-            <a class="nav-link text-white" href="akun.php">Akun</a>
-          </li>
-
           <!-- Menu Saran -->
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link text-white" href="saran.php">Saran</a>
-          </li>
+          </li> -->
         </ul>
 
         <!-- User Icon Dropdown -->

@@ -57,7 +57,7 @@
             <th scope="col">Alamat</th>
             <th scope="col">Jenis kelamin</th>
             <th scope="col">Minat keterampilan</th>
-            <th colspan='2'>Aksi</th>
+            <th colspan='2'class="text-center">Aksi</th>
           </tr>
         </thead>
 

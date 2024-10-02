@@ -64,7 +64,8 @@
             <th scope="col">Nama</th>
             <th scope="col">Email</th>
             <th scope="col">Saran</th>
-            <th scope="col">Aksi</th>
+            <th scope="col">waktu</th>
+            <th scope="col" class="text-center">Aksi</th>
           </tr>
         </thead>
 
@@ -85,6 +86,7 @@
               <td><?php echo $data["nama"]; ?></td>
               <td><?php echo $data["email"];   ?></td>
               <td><?php echo $data["saran"];   ?></td>
+              <td><?php echo $data["created_at"];   ?></td>
               <td>
                 <a href="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>?id=<?php echo $data['id']; ?>"
                   class="btn btn-danger"

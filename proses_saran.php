@@ -6,6 +6,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $saran = $_POST['saran'];
 
+    date_default_timezone_set('Asia/Jakarta');
+
     // Menyimpan data ke dalam tabel
     $sql = "INSERT INTO saran (nama, email, saran) VALUES ('$nama', '$email', '$saran')";
     

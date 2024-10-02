@@ -1,6 +1,6 @@
 <?php
 // Memanggil atau membutuhkan file function.php
-require 'koneksi.php';
+require '../koneksi.php';
 
 // Menampilkan semua data dari table Mahasiswa berdasarkan nim secara Descending
 $peserta = query("SELECT * FROM peserta ORDER BY id DESC");

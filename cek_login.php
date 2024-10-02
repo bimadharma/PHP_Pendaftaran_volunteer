@@ -1,4 +1,9 @@
 <?php
+// $pass = password_hash('123', PASSWORD_DEFAULT); 
+// var_dump($pass);
+// die;
+
+
 include 'koneksi.php'; // Menghubungkan dengan file koneksi database
 session_start();
 
@@ -23,8 +28,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (password_verify($password, $hashed_password)) {
                 $_SESSION['nama'] = $row['nama']; // Menyimpan nama pengguna dalam session
                 $_SESSION['email'] = $email; // Menyimpan email pengguna dalam session
+                $_SESSION['role'] = $row['role']; // Menyimpan role pengguna dalam session
 
-                header("Location: dashboard.php");
+                // Redirect berdasarkan role
+                if ($row['role'] == 'admin') {
+                    header("Location: admin/dashboard.php");
+                } elseif ($row['role'] == 'user') {
+                    header("Location: user/dashboard.php");
+                }
                 exit();
             } else {
                 // Password tidak cocok
